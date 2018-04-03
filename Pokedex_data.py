@@ -20,6 +20,6 @@ pokenum = input("Numero del pokemon: ")
 pokenom = input("Nombre del pokemon: ")
 pokedes = input("Descripcion: ")
 
-pokearchivo = open('{}'.format(pokenom) ,'w', 'txt') 
+pokearchivo = open( pokenom,'w', 'txt') 
 
 pokearchivo.close()
