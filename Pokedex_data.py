@@ -12,4 +12,14 @@ r: solo lectura
 
   
 """""
+pokenum=0     "numero del pokemon"
+pokenom=""    "nombre del pokemon"
+pokedes=""    "descripcion del pokedex"
 
+pokenum = input("Numero del pokemon: ")
+pokenom = input("Nombre del pokemon: ")
+pokedes = input("Descripcion: ")
+
+pokearchivo = open('{}'.format(pokenom) ,'w', 'txt') 
+
+pokearchivo.close()
