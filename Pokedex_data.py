@@ -10,8 +10,11 @@ w: crear y escribe archivo
 a: si el archivo existe agrega al final
 r: solo lectura
 
+'C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/' ubicacion pc ray
   
 """""
+pathdatadex= input("introduce la ubicacion en la que guardaras la informacion: ")
+
 salir=""
 
 while salir != "no" :
@@ -23,7 +26,7 @@ while salir != "no" :
     pokenom = input("Nombre del pokemon: ")
     pokedes = input("Descripcion: ")
     
-    pokearchivo = open('C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/'+ pokenum + '.-' + pokenom +'.txt' ,'w')
+    pokearchivo = open(pathdatadex + pokenum + '.-' + pokenom +'.txt' ,'w')
     pokearchivo.write("Numero: {} \n".format(pokenum))
     pokearchivo.write("Nombre: {} \n" .format(pokenom))
     pokearchivo.write("Descripcion: ")
@@ -45,5 +48,5 @@ while salir != "no" :
        cont1 += 1
       
     pokearchivo.close()
-    salir=input("Desea agregar otro pokemon?(si/no) : ")
+    salir=input("Desea agregar otro pokemon? si no desea agregar otro escriba \'no' : ")
     salir = salir.lower()
