@@ -1,0 +1,3 @@
+Numero: 4 
+Nombre: Charmander 
+Descripcion : La llama que tiene en la punta de la cola arde según sus sentimientos.\n Llamea levemente cuando está alegre y arde vigorosamente cuando está enfadado. 

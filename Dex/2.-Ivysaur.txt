@@ -1,0 +1,3 @@
+Numero: 2 
+Nombre: Ivysaur 
+Descripcion : 	Este Pokémon lleva un bulbo en el lomo y, para poder con su peso,\n tiene unas patas y un tronco gruesos y fuertes.\n Si empieza a pasar más tiempo al sol, será porque el bulbo está a punto de hacerse una flor grande. 

@@ -12,14 +12,21 @@ r: solo lectura
 
   
 """""
-pokenum=0     "numero del pokemon"
-pokenom=""    "nombre del pokemon"
-pokedes=""    "descripcion del pokedex"
+salir=""
 
-pokenum = input("Numero del pokemon: ")
-pokenom = input("Nombre del pokemon: ")
-pokedes = input("Descripcion: ")
+while salir != "no" :
+    pokenum= 0
+    pokenom=""    "nombre del pokemon"
+    pokedes=""    "descripcion del pokedex"
 
-pokearchivo = open( pokenom,'w', 'txt') 
+    pokenum = input("Numero del pokemon: ")
+    pokenom = input("Nombre del pokemon: ")
+    pokedes = input("Descripcion: ")
 
-pokearchivo.close()
+    pokearchivo = open('C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/'+ pokenum + '.-' + pokenom +'.txt' ,'w')
+    pokearchivo.write("Numero: {} \n".format(pokenum))
+    pokearchivo.write("Nombre: {} \n" .format(pokenom))
+    pokearchivo.write("Descripcion : {} \n" .format(pokedes))
+    pokearchivo.close()
+    salir=input("Desea agregar otro pokemon?(si/no) : ")
+    salir = salir.lower()

@@ -1,0 +1,3 @@
+Numero: 5 
+Nombre: Charmleon 
+Descripcion : Charmeleon no tiene reparo en acabar con su rival usando las afiladas garras que tiene.\n Si su enemigo es fuerte, se vuelve agresivo, y la llama que tiene en el extremo de la cola empieza a arder con mayor intensidad tornándose azulada. 

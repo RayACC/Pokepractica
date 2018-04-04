@@ -1,0 +1,3 @@
+Numero: 3 
+Nombre: Venusaur 
+Descripcion : Venusaur tiene una flor enorme en el lomo que, según parece,\n adquiere unos colores muy vivos si está bien nutrido y le da mucho el sol.\n El aroma delicado de la flor tiene un efecto relajante en el ánimo de las personas. 
