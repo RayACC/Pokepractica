@@ -22,11 +22,28 @@ while salir != "no" :
     pokenum = input("Numero del pokemon: ")
     pokenom = input("Nombre del pokemon: ")
     pokedes = input("Descripcion: ")
-
+    
     pokearchivo = open('C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/'+ pokenum + '.-' + pokenom +'.txt' ,'w')
     pokearchivo.write("Numero: {} \n".format(pokenum))
     pokearchivo.write("Nombre: {} \n" .format(pokenom))
-    pokearchivo.write("Descripcion : {} \n" .format(pokedes))
+    pokearchivo.write("Descripcion: ")
+    
+      desantes= pokedes
+      cont1 = 0
+      pokedes= ""
+      
+       for letra in desantes:
+        pokedes.append(letra)
+        
+          if cont1 >= 40:
+        
+            if letra = "." or "," or " "
+            pokearchivo.write("{} \n".format(pokedes))
+            pokedes = ""
+            cont1=0
+          
+       cont1 += 1
+      
     pokearchivo.close()
     salir=input("Desea agregar otro pokemon?(si/no) : ")
     salir = salir.lower()
