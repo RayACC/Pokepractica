@@ -11,7 +11,7 @@ a: si el archivo existe agrega al final
 r: solo lectura
 
 C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/ ubicacion pc ray
-
+123456789 123456789 123456789 123456789,.,. 123456789 123456789 123456789 123456789,.,. QWERTYUIO 
 """""
 pathdatadex= input("introduce la ubicacion en la que guardaras la informacion: ")
 salir_programa=""
@@ -71,20 +71,13 @@ while salir_programa != "no" :
                     pokearchivo.write("{} \n".format((poke_des)))
                     pokearchivo.close()
                     poke_des = ""
-                    diferencia = longitud - contador_descripcion
                     contador_descripcion = 0
             else:
              contador_descripcion +=1
-        if diferencia > 0:
-            pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom + '.txt', 'a')
-            pokearchivo.write("{} \n".format((poke_des)))
-            pokearchivo.close()
-            contador_descripcion = 0
-            poke_des = ""
 
-
-
-
-
+        pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom + '.txt', 'a')
+        pokearchivo.write("{} \n".format((poke_des)))
+        pokearchivo.close()
+        poke_des = ""
     salir_programa= input("Si/No: ")
     salir_programa = salir_programa.lower()
