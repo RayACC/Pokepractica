@@ -11,7 +11,7 @@ a: si el archivo existe agrega al final
 r: solo lectura
 
 C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/ ubicacion pc ray
-123456789 123456789 123456789 123456789,.,. 123456789 123456789 123456789 123456789,.,. QWERTYUIO 
+
 """""
 pathdatadex= input("introduce la ubicacion en la que guardaras la informacion: ")
 salir_programa=""
