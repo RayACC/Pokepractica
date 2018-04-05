@@ -10,43 +10,81 @@ w: crear y escribe archivo
 a: si el archivo existe agrega al final
 r: solo lectura
 
-'C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/' ubicacion pc ray
-  
+C:/Users/tsuku/PycharmProjects/Pokepractica/Dex/ ubicacion pc ray
+
 """""
 pathdatadex= input("introduce la ubicacion en la que guardaras la informacion: ")
+salir_programa=""
+contador_descripcion = 0
+poke_des = ""
+puntuacion = [".",","," "]
+longitud = 0
+menos_de_30 = 0
 
-salir=""
+while salir_programa != "no" :
 
-while salir != "no" :
-    pokenum= 0
-    pokenom=""    "nombre del pokemon"
-    pokedes=""    "descripcion del pokedex"
+    diferencia = 0
+    salir_programa = ""
+    contador_descripcion = 0
+    poke_des = ""
+    puntuacion = [".", ",", " "]
+    longitud = 0
+    menos_de_30 = 0
 
-    pokenum = input("Numero del pokemon: ")
-    pokenom = input("Nombre del pokemon: ")
-    pokedes = input("Descripcion: ")
-    
-    pokearchivo = open(pathdatadex + pokenum + '.-' + pokenom +'.txt' ,'w')
-    pokearchivo.write("Numero: {} \n".format(pokenum))
-    pokearchivo.write("Nombre: {} \n" .format(pokenom))
-    pokearchivo.write("Descripcion: ")
-    
-      desantes= pokedes
-      cont1 = 0
-      pokedes= ""
-      
-       for letra in desantes:
-        pokedes.append(letra)
-        
-          if cont1 >= 40:
-        
-            if letra = "." or "," or " "
-            pokearchivo.write("{} \n".format(pokedes))
-            pokedes = ""
-            cont1=0
-          
-       cont1 += 1
-      
+    poke_num = input("Numero del pokemon: ")
+    poke_nom = input("Nombre del pokemon: ")
+    poke_desA = input("Descripcion: ")
+
+    longitud= len(poke_desA)
+    residuo_longitud = longitud%40
+
+    if residuo_longitud > 0 :
+        menos_de_30 = False
+        if longitud < 40:
+         menos_de_30 = True
+    else:
+        if longitud < 40:
+         menos_de_30 = True
+
+    pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom +'.txt' ,'w')
+    pokearchivo.write("Numero: {} \n".format(poke_num))
+    pokearchivo.write("Nombre: {} \n" .format(poke_nom))
+    pokearchivo.write("Descripcion:\n")
     pokearchivo.close()
-    salir=input("Desea agregar otro pokemon? si no desea agregar otro escriba \'no' : ")
-    salir = salir.lower()
+
+    if menos_de_30 == True:
+        for letra in poke_desA:
+            poke_des += letra
+
+        pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom + '.txt', 'a')
+        pokearchivo.write("{} \n".format((poke_des)))
+        pokearchivo.close()
+        contador_descripcion = 0
+        poke_des = ""
+    else:
+        for letra in poke_desA:
+            poke_des += letra
+            if contador_descripcion >=40:
+                contador_descripcion += 1
+                if letra in puntuacion :
+                    pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom + '.txt', 'a')
+                    pokearchivo.write("{} \n".format((poke_des)))
+                    pokearchivo.close()
+                    poke_des = ""
+                    diferencia = longitud - contador_descripcion
+                    contador_descripcion = 0
+            else:
+             contador_descripcion +=1
+        if diferencia > 0:
+            pokearchivo = open(pathdatadex + poke_num + '.-' + poke_nom + '.txt', 'a')
+            pokearchivo.write("{} \n".format((poke_des)))
+            pokearchivo.close()
+            contador_descripcion = 0
+            poke_des = ""
+
+
+
+
+
+    salir_programa= input("Si/No: ")
+    salir_programa = salir_programa.lower()

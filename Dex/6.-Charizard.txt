@@ -1,0 +1,3 @@
+Numero: 6 
+Nombre: Charizard 
+Descripcion : Charizard se dedica a volar por los cielos en busca de oponentes fuertes.\n Echa fuego por la boca y es capaz de derretir cualquier cosa. No obstante, si su rival es más débil que él, no usará este ataque. 

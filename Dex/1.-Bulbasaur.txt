@@ -1,3 +1,5 @@
 Numero: 1 
 Nombre: Bulbasaur 
-Descripcion : A Bulbasaur es fácil verle echándose una siesta al sol.\n La semilla que tiene en el lomo va creciendo cada vez más a medida que absorbe los rayos del sol. 
+Descripcion:
+A Bulbasaur es facil verle ech?ndose una siesta al sol. La semilla que tiene en
+el lomo va creciendo cada vez mas a medida
